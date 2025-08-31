@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/electronica.css' %}"/>
+</head>
+<body>
+    <header id="encabezadoE">
+        <p id="tituloP">{{pr1}}</p>
+    </header>
+    <main id="cuerpoprincipal">
+        <section class="one">
+            <img class="imgE" src="{%static 'images/nofound.jpg' %}"/>
+            <p1 class="one1">{{pp1}}</p1>
+        </section>
+        <section class="one">
+            <img class="imgE" src="{%static 'images/nofound.jpg' %}"/>
+            <p1 class="one1">{{pp2}}</p1>
+        </section>
+        <section class="one">
+            <img class="imgE" src="{%static 'images/nofound.jpg' %}"/>
+            <p1 class="one1">{{pp3}}</p1>
+        </section>
+    </main>
+    <footer id="piepaginaboton">
+        <form method="post">
+                {% csrf_token %}
+            <button id="pboton" id="botonindex3" type="submit" name="seccion" value="botones">Volver</button>
+        </form>
+    </footer>
+</body>
+</html>

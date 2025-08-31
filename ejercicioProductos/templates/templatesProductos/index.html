@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/index.css' %}"/>
+</head>
+<body>
+    <header id="encabezadoI">
+        <img id="img1" src="{%static 'images/index.png' %}"/>
+    </header>
+    <main>
+        
+        <section>
+            {% if seccion == 'botones' %}
+                {% include 'templatesProductos/botones.html' with p1=data0.p1 p2=data0.p2 p3=data0.p3 %}
+            {% elif seccion == 'electronica' %}
+                {% include 'templatesProductos/electronica.html' with pr1=data1.pr1 pp1=data1.pp1 pp2=data1.pp2 pp3=data1.pp3 %}
+            {% elif seccion == 'juguetes' %}
+                {% include 'templatesProductos/electronica.html' with pr1=data2.pr1 pp1=data2.pp1 pp2=data2.pp2 pp3=data2.pp3 %}
+            {% elif seccion == 'ropa' %}
+                {% include 'templatesProductos/electronica.html' with pr1=data3.pr1 pp1=data3.pp1 pp2=data3.pp2 pp3=data3.pp3 %}
+            {% endif %}
+        </section>
+        
+    </main>
+</body>
+</html>
